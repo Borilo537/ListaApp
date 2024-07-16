@@ -1,0 +1,129 @@
+@font-face {
+  font-family: LEMON;
+  src: url(./assets/LEMONMILK-Regular.otf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(54, 38, 33);
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.Header {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Header h1 {
+  font-size: 100px;
+  color: white;
+  font-family: LEMON;
+  text-align: center;
+}
+
+.Header form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.Header input {
+  padding: 10px;
+  font-size: 16px;
+  width: 400px;
+  max-width: 80vw;
+  font-family: LEMON;
+  margin-right: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: none;
+}
+
+.Header button {
+  transition: 0.4s;
+  border: none;
+  border-radius: 5px;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+
+  width: 200px;
+  font-size: 20px;
+  font-family: LEMON;
+  cursor: pointer;
+  background-color: rgb(29, 22, 20);
+  color: white;
+}
+
+.Header button:hover {
+  transform: scale(0.95);
+  padding: 20px 30px;
+  font-size: 23px;
+  background-color: white;
+  color: rgb(29, 22, 20);
+}
+
+.Header ul {
+  margin-top: 70px;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nothover {
+  transition: 0.7s;
+  display: flex;
+  justify-content: space-between;
+  width: 650px;
+  max-width: 80vw;
+  padding: 20px;
+  color: white;
+  background: rgb(105, 81, 75);
+  border: rgb(0, 255, 68) 2px solid;
+  margin-top: 5px;
+  font-family: LEMON;
+  font-size: 25px;
+  border-radius: 4px;
+}
+
+.Header li div {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.Header li div img {
+width: 35px;
+height: 35px;
+cursor: pointer;
+}
+
+.hovered {
+  transition: 0.2s;
+  display: flex;
+  justify-content: space-between;
+  width: 650px;
+  max-width: 80vw;
+  padding: 20px;
+  color: white;
+  background: rgb(53, 44, 42);
+  border: rgb(255, 0, 0) 2px solid;
+  margin-top: 5px;
+  font-family: LEMON;
+  font-size: 25px;
+  border-radius: 4px;
+}
