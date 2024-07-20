@@ -137,6 +137,7 @@ body {
 .Modal {
   top: 0;
   left: 0;
+  padding: 5vi;
   background-color: rgba(0, 0, 0, 0.626);
   backdrop-filter: blur(5px);
   display: flex;
@@ -148,6 +149,10 @@ body {
 }
 
 .Modal div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   background-color: rgb(53, 44, 42);
   width: 550px;
   height: 350px;
@@ -155,3 +160,42 @@ body {
   border-radius: 20px;
   padding: 10px;
 }
+
+.Modal div div{
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.Modal div h2{
+  font-size: 40px;
+}
+
+.Modal div input{
+  color: white;
+  border-radius: 10px;
+  font-size: 30px;
+  padding: 10px;
+  background-color: rgb(105, 81, 75);
+  border: none;
+}
+
+.Modal div button{
+  transition: 0.2s;
+  cursor: pointer;
+  border: none;
+  font-size: 30px;
+  background-color: rgb(105, 81, 75);
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
+
+.Modal div button:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(105, 81, 75);
+}
+
+

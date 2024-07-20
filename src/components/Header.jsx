@@ -4,7 +4,6 @@ import editImage from '../assets/editar.png';
 import trashImage from '../assets/trash.png';
 import Modal from 'react-modal';
 
-// Definindo o elemento root para o Modal
 Modal.setAppElement('#root');
 
 const Header = () => {
@@ -12,6 +11,24 @@ const Header = () => {
     const [inputValue, setInputValue] = useState('');
     const [items, setItems] = useState([]);
     const [isModalVisible, setIsModalVisible] = useState(false);
+    const [editIndex, setEditIndex] = useState(null);
+    const [inputValue2, setInputValue2] = useState('');
+
+    const handleInputEdit = (e) => {
+        setInputValue2(e.target.value);
+    };
+
+    const handleEdit = (e) => {
+        e.preventDefault();
+        if (inputValue2.trim()) {
+            const updatedItems = [...items];
+            updatedItems[editIndex] = inputValue2;
+            setItems(updatedItems);
+            setInputValue2('');
+            setEditIndex(null);
+            setIsModalVisible(false);
+        }
+    };
 
     const handleTrashMouseEnter = (index) => {
         setHoveredIndex(index);
@@ -27,7 +44,8 @@ const Header = () => {
     };
 
     const handleEditClick = (index) => {
-        console.log('clicou: ', index);
+        setEditIndex(index);
+        setInputValue2(items[index]);
         setIsModalVisible(true);
     };
 
@@ -68,7 +86,14 @@ const Header = () => {
             >
                 <div>
                     <h2>Editar Item</h2>
-                    <button onClick={() => setIsModalVisible(false)}>Fechar</button>
+                    <input
+                        value={inputValue2}
+                        onChange={handleInputEdit}
+                    />
+                    <div>
+                        <button onClick={handleEdit}>Salvar</button>
+                        <button onClick={() => setIsModalVisible(false)}>Fechar</button>
+                    </div>
                 </div>
             </Modal>
 
